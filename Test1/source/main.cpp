@@ -1,5 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <string>
 #include <3ds.h>
 #include <stdio.h>
+
+using namespace std;
 
 int main(int argc, char **argv)
 {
@@ -9,6 +14,7 @@ int main(int argc, char **argv)
 	consoleInit(GFX_TOP, NULL);
 
 	// Main loop
+    int press = 0;
 	while (aptMainLoop())
 	{
 		//Scan all the inputs. This should be done once for each frame
@@ -18,19 +24,11 @@ int main(int argc, char **argv)
 		//hidKeysHeld returns information about which buttons are currently pressed (regardless if they were pressed or not pressed in the previous frame)
 		//hidKeysUp returns information about which buttons are not pressed but were pressed in the previous frame
 		u32 kDown = hidKeysDown();
-
 		if (kDown & KEY_B) break; // break in order to return to hbmenu
-
 		if (kDown & KEY_A) 
 		{
-			bool loop = true;
-			while (loop == true)
-			{
-				int press = 0;
-				press++;
-				printf("\x1b[20;20HYou pressed the button %d times", press);
-			}
-
+			press++;
+			cout << "You pressed the button " << press << " times\n";
 
 		}
 
