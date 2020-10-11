@@ -32,9 +32,9 @@ SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 
-APP_TITLE	:=	Chapter2App
-APP_DESCRIPTION		:=	The homebrew app used in chapter 2 of the guide
-APP_AUTHOR	:=	Kaleb Provost (kprovost7314)
+APP_TITLE	:=	Test1
+APP_DESCRIPTION		:=	Press Counter
+APP_AUTHOR	:=	Stovehead
 
 #---------------------------------------------------------------------------------
 # options for code generation
